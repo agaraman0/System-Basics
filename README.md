@@ -94,3 +94,4 @@ Service discovery involves 3 parties: service provider, service consumer and ser
 + https://www.pubnub.com/blog/http-long-polling/
 + https://hackernoon.com/understand-service-discovery-in-microservice-c323e78f47fd
 + https://dzone.com/articles/service-discovery-in-a-microservices-architecture
++ https://www.freecodecamp.org/news/systems-design-for-interviews/
