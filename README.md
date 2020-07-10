@@ -13,6 +13,7 @@ Simply, a protocol is a set of rules. A network protocol is a set of rules follo
 
 A network protocol is an established set of rules that determine how data is transmitted between different devices in the same network. Essentially, it allows connected devices to communicate with each other, regardless of any differences in their internal processes, structure or design.
 
+------------------------------------------------------------
 
 ## Long Polling 
 Web app developers can implement a technique called HTTP long polling, where the client polls the server requesting new information. The server holds the request open until new data is available. Once available, the server responds and sends the new information. When the client receives the new information, it immediately sends another request, and the operation is repeated. This effectively emulates a server push feature.
