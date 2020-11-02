@@ -29,14 +29,19 @@
 + HTTP Long polling  
 + Consistent Hashing
 
+<br>
+
 **Credit** - [Soumyajit Bhattacharyay](https://www.linkedin.com/in/soumyajit-bhattacharyay-4a897611a/)
 **[Post](https://www.linkedin.com/posts/soumyajit-bhattacharyay-4a897611a_scalability-systemdesign-hld-activity-6726135149836152832-luGH/)**
 
+<br>
+<br>
 
 ### System Design Terminologies
 Scalability, Availability, Efficiency, Reliability, Serviceability, Manageability, Extensible, Client-Server, Protocol, Proxy, Gateway, DNS, Latency, Throughput, Read Heavy, Write Heavy, 
 
-------------
+<br>
+
 ### Best System Design Interview Format Or Flow
 + Clarifying Questions
 + Functional Requirements
@@ -48,7 +53,8 @@ Scalability, Availability, Efficiency, Reliability, Serviceability, Manageabilit
 + Basic Architecture And Data Flow
 + Components or Functionality Implementation
 + Trade offs And Corner Cases
- 
+
+<br> 
 
 ## Article Links
 + [ The complete guide to crack the System Design interview](https://towardsdatascience.com/the-complete-guide-to-the-system-design-interview-ba118f48bdfc)
@@ -65,6 +71,7 @@ Scalability, Availability, Efficiency, Reliability, Serviceability, Manageabilit
 + https://hackernoon.com/understand-service-discovery-in-microservice-c323e78f47fd
 + https://dzone.com/articles/service-discovery-in-a-microservices-architecture
 
+<br>
 
 ## Best Engineering Blogs or Platform To Follow For System Design
 + [HighScalability](http://highscalability.com/)
@@ -74,12 +81,16 @@ Scalability, Availability, Efficiency, Reliability, Serviceability, Manageabilit
 +  [Linkedin Engineering](https://engineering.linkedin.com/)
 + 
 
+<br>
+
 ## Best Documentations For System Design
 + [System design primer in Github](https://github.com/donnemartin/system-design-primer)
 +  [AWS Documentation](https://docs.aws.amazon.com/)
 + [System Design Cheatsheet](https://gist.github.com/vasanthk/485d1c25737e8e72759f)
 + [ System Design Prepration](https://github.com/shashank88/system_design)
 + [Grokking System Design Interview Github](https://github.com/lei-hsia/grokking-system-design)
+
+<br>
 
 ## Best Youtube Channels And Playlists For System Design
 + [Gaurav Sen](https://www.youtube.com/channel/UCRPMAqdtSgd0Ipeef7iFsKw)
@@ -103,9 +114,11 @@ Scalability, Availability, Efficiency, Reliability, Serviceability, Manageabilit
 + [Udit Agarwal](https://www.youtube.com/user/UDIT19911)
 
 
+<br>
+
 **Note** Content is under continuous development phase. it contains some terminologies and concepts which really helps when you are thinking about systems.
 
--------------------
+<br>
 
 ## Content 
 
@@ -127,7 +140,8 @@ The flow:
 3.  When a message appears – the server responds to the request with it.
 4.  The browser makes a new request immediately.
 
-------------------------
+<br>
+
 ### WebSockets
 Web sockets are defined as a two-way communication between the servers and the clients, which mean both the parties, communicate and exchange data at the same time. This protocol defines a full duplex communication from the ground up. Web sockets take a step forward in bringing desktop rich functionalities to the web browsers. It represents an evolution, which was awaited for a long time in client/server web technology.
 
@@ -136,7 +150,9 @@ Web sockets are defined as a two-way communication between the servers and the c
 + **Real-time web application**
 + **Gaming application**
 + **Chat application**
---------------------
+
+<br>
+
 ### Gateway
 A **gateway** is a piece of [networking hardware](https://en.wikipedia.org/wiki/Networking_hardware "Networking hardware") used in [telecommunications](https://en.wikipedia.org/wiki/Telecommunication "Telecommunication") for telecommunications networks that allows data to flow from one discrete network to another. Gateways are distinct from [routers](https://en.wikipedia.org/wiki/Router_(computing) "Router (computing)") or [switches](https://en.wikipedia.org/wiki/Network_switch "Network switch") in that they communicate using more than one protocol to connect a bunch of networks and can operate at any of the seven layers of the [open systems interconnection](https://en.wikipedia.org/wiki/OSI_model "OSI model") model (OSI).
 
@@ -153,7 +169,8 @@ Gateways can take several forms and perform a variety of tasks:
 -   **Amazon API Gateway** - allows a developer to connect non-AWS applications to AWS back-end resources
 -   **VoIP trunk gateway** - facilitates the use of plain old telephone service (POTS) equipment, such as landline phones and fax machines, with a voice over IP (VoIP) network
 -   **Email security gateway** - prevents the transmission of emails that break company policy or will transfer information with malicious intent
--------------------------
+
+<br>
 
 ### Service Discovery
 **Service discovery** is the automatic detection of devices and services offered by these devices on a [computer network](https://en.wikipedia.org/wiki/Computer_network "Computer network"). A **service discovery protocol** (**SDP**) is a [network protocol](https://en.wikipedia.org/wiki/Network_protocol "Network protocol") that helps accomplish service discovery. Service discovery aims to reduce the configuration efforts from users.
@@ -174,7 +191,7 @@ Service discovery involves 3 parties: service provider, service consumer and ser
 4.  **Sending back all data of a provider may not be necessary.** We can keep a **_global versioning_** of providers and consumer only needs to update its local copy when version got incremented.
 5.  **Single point of failure**. If the service registry (e.g. the redis instance we are using here) is down, all consumer and provider will be affected. To alleviate this, we can use a **_distributed database_** as service registry, such as `zookeeper/etcd/consul` .
 
----------------------
+<br>
 
 ### SQL vs NoSQL
 
@@ -216,6 +233,5 @@ Popular NoSQL databases:
 -   Cassandra
 -   HBASE
 
------------------
 
 **Note** Suggestions are Welcome
