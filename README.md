@@ -64,7 +64,7 @@ Scalability, Availability, Efficiency, Reliability, Serviceability, Manageabilit
 + [ Top 10 System Design Interview Questions and Answers](https://www.geeksforgeeks.org/top-10-system-design-interview-questions-and-answers/)
 + [Getting Started With System Design](https://www.geeksforgeeks.org/getting-started-with-system-design/?ref=rp)
 + [How To Crack System Design Round in Interviews](https://www.geeksforgeeks.org/how-to-crack-system-design-round-in-interviews/?ref=rp)
-+ https://www.geeksforgeeks.org/what-is-web-socket-and-how-it-is-different-from-the-http/
++ [What is web socket and how it is different from the HTTP?](https://www.geeksforgeeks.org/what-is-web-socket-and-how-it-is-different-from-the-http/)
 + https://www.tutorialspoint.com/websockets/index.htm
 + https://javascript.info/long-polling
 + https://www.pubnub.com/blog/http-long-polling/
