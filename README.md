@@ -12,7 +12,7 @@
 +  Replication
 +  SQL vs. NoSQL.
 + Latency vs Throughput
----------------
+
 
 ### Important System Design Algorithms To Read Before Interview
 
@@ -32,7 +32,6 @@
 **Credit** - [Soumyajit Bhattacharyay](https://www.linkedin.com/in/soumyajit-bhattacharyay-4a897611a/)
 **[Post](https://www.linkedin.com/posts/soumyajit-bhattacharyay-4a897611a_scalability-systemdesign-hld-activity-6726135149836152832-luGH/)**
 
----------
 
 ### System Design Terminologies
 Scalability, Availability, Efficiency, Reliability, Serviceability, Manageability, Extensible, Client-Server, Protocol, Proxy, Gateway, DNS, Latency, Throughput, Read Heavy, Write Heavy, 
