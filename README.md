@@ -65,11 +65,12 @@ Scalability, Availability, Efficiency, Reliability, Serviceability, Manageabilit
 + [Getting Started With System Design](https://www.geeksforgeeks.org/getting-started-with-system-design/?ref=rp)
 + [How To Crack System Design Round in Interviews](https://www.geeksforgeeks.org/how-to-crack-system-design-round-in-interviews/?ref=rp)
 + [What is web socket and how it is different from the HTTP?](https://www.geeksforgeeks.org/what-is-web-socket-and-how-it-is-different-from-the-http/)
-+ https://www.tutorialspoint.com/websockets/index.htm
-+ https://javascript.info/long-polling
-+ https://www.pubnub.com/blog/http-long-polling/
-+ https://hackernoon.com/understand-service-discovery-in-microservice-c323e78f47fd
-+ https://dzone.com/articles/service-discovery-in-a-microservices-architecture
++ [Long polling](https://javascript.info/long-polling)
++ [What is HTTP Long Polling?
+](https://www.pubnub.com/blog/http-long-polling/)
++ [Service discovery in microservice architecture
+](https://hackernoon.com/understand-service-discovery-in-microservice-c323e78f47fd)
++ [Service Discovery in a Microservices Architecture](https://dzone.com/articles/service-discovery-in-a-microservices-architecture)
 
 <br>
 
