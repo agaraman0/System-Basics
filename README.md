@@ -12,30 +12,32 @@
 +  Replication
 +  SQL vs. NoSQL.
 + Latency vs Throughput
-
 ---------------
+
 ### Important System Design Algorithms To Read Before Interview
 
- 1) Trie algorithm  
-2) Reverse index  
-3) Frugal Streaming  
-4) Geo-hashing  
-5) Leaky bucket, Token bucket and its variation  
-6) Bloom Filters  
-7) Operational transformation  
-8) Quadtree / Rtree  
-9) Loose Counting  
-10) XMPP / Web Sockets uses  
-11) HTTP Long polling  
-12) Consistent Hashing
++ Trie algorithm  
++ Reverse index  
++ Frugal Streaming  
++ Geo-hashing  
++ Leaky bucket, Token bucket and its variation  
++ Bloom Filters  
++ Operational transformation  
++ Quadtree / Rtree  
++ Loose Counting  
++ XMPP / Web Sockets uses  
++ HTTP Long polling  
++ Consistent Hashing
 
 **Credit** - [Soumyajit Bhattacharyay](https://www.linkedin.com/in/soumyajit-bhattacharyay-4a897611a/)
 **[Post](https://www.linkedin.com/posts/soumyajit-bhattacharyay-4a897611a_scalability-systemdesign-hld-activity-6726135149836152832-luGH/)**
 
 ---------
+
 ### System Design Terminologies
 Scalability, Availability, Efficiency, Reliability, Serviceability, Manageability, Extensible, Client-Server, Protocol, Proxy, Gateway, DNS, Latency, Throughput, Read Heavy, Write Heavy, 
 
+------------
 ### Best System Design Interview Format Or Flow
 + Clarifying Questions
 + Functional Requirements
@@ -48,7 +50,6 @@ Scalability, Availability, Efficiency, Reliability, Serviceability, Manageabilit
 + Components or Functionality Implementation
 + Trade offs And Corner Cases
  
- ------------------------
 
 ## Article Links
 + [ The complete guide to crack the System Design interview](https://towardsdatascience.com/the-complete-guide-to-the-system-design-interview-ba118f48bdfc)
@@ -65,7 +66,6 @@ Scalability, Availability, Efficiency, Reliability, Serviceability, Manageabilit
 + https://hackernoon.com/understand-service-discovery-in-microservice-c323e78f47fd
 + https://dzone.com/articles/service-discovery-in-a-microservices-architecture
 
----------------------------------
 
 ## Best Engineering Blogs or Platform To Follow For System Design
 + [HighScalability](http://highscalability.com/)
@@ -75,7 +75,6 @@ Scalability, Availability, Efficiency, Reliability, Serviceability, Manageabilit
 +  [Linkedin Engineering](https://engineering.linkedin.com/)
 + 
 
---------------------------------
 ## Best Documentations For System Design
 + [System design primer in Github](https://github.com/donnemartin/system-design-primer)
 +  [AWS Documentation](https://docs.aws.amazon.com/)
@@ -83,7 +82,6 @@ Scalability, Availability, Efficiency, Reliability, Serviceability, Manageabilit
 + [ System Design Prepration](https://github.com/shashank88/system_design)
 + [Grokking System Design Interview Github](https://github.com/lei-hsia/grokking-system-design)
 
----------------
 ## Best Youtube Channels And Playlists For System Design
 + [Gaurav Sen](https://www.youtube.com/channel/UCRPMAqdtSgd0Ipeef7iFsKw)
 + [Gaurav Sen System Design Playlist](https://www.youtube.com/playlist?list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX)
@@ -105,12 +103,12 @@ Scalability, Availability, Efficiency, Reliability, Serviceability, Manageabilit
 + [Distributed Systems Course](https://www.youtube.com/user/cbcolohan)
 + [Udit Agarwal](https://www.youtube.com/user/UDIT19911)
 
----------------
 
 **Note** Content is under continuous development phase. it contains some terminologies and concepts which really helps when you are thinking about systems.
 
 -------------------
-### Content 
+
+## Content 
 
 + Long Polling
 + Websockets
