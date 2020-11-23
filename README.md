@@ -1,6 +1,6 @@
 # System Design
 
-### Must Learn System Design Concepts
+## Must Learn System Design Concepts
 +  Consistent Hashing
 +  CAP Theorem
 +  Load Balancing
@@ -14,7 +14,7 @@
 + Latency vs Throughput
 
 ---------------
-### Important System Design Algorithms To Read Before Interview
+## Important System Design Algorithms To Read Before Interview
 
  1) Trie algorithm  
 2) Reverse index  
@@ -34,13 +34,13 @@
 
 ---------
 
-### Bits And Bytes For Any System
+## Bits And Bytes For Any System
 ACID Transaction, ACL, AES, Alerting, Apache Kafka, Asymmetric Encryption, Availability, Availability Zone, Blob Storage, Cache, Cache Eviction Policy, Cache Hit, Cache Miss, CAP Theorem, Certificate Authority, Client, Client-Server Model, Cloud Pub-Sub, Configuration, Consensus Algorithm, Consistent Hashing, Content Delivery network, Cypher, Database Index, Database Lock, Databases, DDoS Attack, Disk, Distributed File System, DNS, DOS Attack, Etcd, Eventual Consistency, File System, Forward Proxy, Google Cloud Storage, Gossip Protocol, Graph Database, Hadoop, Hashing Function, High Availability, Horizontal Scaling, Hot Spot, HTTP, HTTPS, Idempotent Operation, InfluxDB, IP, IP Address, IP Packet, JSON, Key-Value Store, Latency, Leader Election, Load Balancer, Logging, Man In The Middle Attack, Map Reduce, Memory, Microservice Architecture, MongoDB, Monitoring, Monolithic Architecture, MySQL, Neo4j, Nginx, Nines, Node/Instance/Host, Non-Relational Database, NoSQL Database, Pagination, Paxos & Raft, Zookeeper, YAML, Worker Pool Pattern, Virtual Machine, Vertical Scaling, TLS Handshake, TLS, Time Series Database, Throughput,TCP, Symmetric Encryption, Strong Consistency, Streaming, Stateless, Stateful, SSL Certificate, SQL Database, SQL, Spatial Database, Socket, SLO, SLA, Sharding, SHA, Server-Selection Strategy, Server, S3, Reverse Proxy, Replication, Rendezvous Hashing, Redundancy, Redis, Rate Limiting, Quadtree, Publish/Subscribe Pattern, Prometheus, Process, Postgres, Port, Polling, Persistent Storage, Percentiles, Peer-To-Peer Network
 
-### System Design Terminologies
+## System Design Terminologies
 Scalability, Availability, Efficiency, Reliability, Serviceability, Manageability, Extensible, Client-Server, Protocol, Proxy, Gateway, DNS, Latency, Throughput, Read Heavy, Write Heavy, 
 
-### Best System Design Interview Format Or Flow
+## Best System Design Interview Format Or Flow
 + Clarifying Questions
 + Functional Requirements
 + Non Functional Requirements
@@ -52,7 +52,7 @@ Scalability, Availability, Efficiency, Reliability, Serviceability, Manageabilit
 + Components or Functionality Implementation
 + Trade offs And Corner Cases
  
- ### Some Capacity Estimation
+ ## Some Capacity Estimation
  |Component Or Platform| Unit Per Second | Unit Per Day | Highest At Single Time |
  |--|--|--|--|
  |Server|1000 Request| | |
@@ -63,7 +63,7 @@ Scalability, Availability, Efficiency, Reliability, Serviceability, Manageabilit
  
  [See What's happening at every second in the world at these giant platforms](https://everysecond.io/)
  
- ### Availability Industry Measurements Cheatsheet 
+ ## Availability Industry Measurements Cheatsheet 
 
 | Availability level    | Downtime per year | Downtime per quarter | Downtime per month | Downtime per week | Downtime per day | Downtime per hour |
 |-----------------------|-------------------|----------------------|--------------------|-------------------|------------------|-------------------|
@@ -76,7 +76,7 @@ Scalability, Availability, Efficiency, Reliability, Serviceability, Manageabilit
 | 99.99%("four nines")  | 52.6 minutes      | 12.96 minutes        | 4.32 minutes       | 60.5 seconds      | 8.64 seconds     | 0.36 seconds      |
 | 99.999%("five nines") | 5.26 minutes      | 1.30 minutes         | 25.9 seconds       | 6.05 seconds      | 0.87 seconds     | 0.04 seconds      |
 
-### Concept Technology Implementation 
+## Concept Technology Implementation 
 
 | System Design Concept |  Technology Used To Implement | Others |
 |--|--|--|
@@ -170,7 +170,7 @@ Scalability, Availability, Efficiency, Reliability, Serviceability, Manageabilit
 
 -------------------
 
-### Content 
+# Content 
 
 + Long Polling
 + Websockets
@@ -180,7 +180,7 @@ Scalability, Availability, Efficiency, Reliability, Serviceability, Manageabilit
 
 -----------------------------------------------------------
 
-### Long Polling 
+## Long Polling 
 Web app developers can implement a technique called HTTP long polling, where the client polls the server requesting new information. The server holds the request open until new data is available. Once available, the server responds and sends the new information. When the client receives the new information, it immediately sends another request, and the operation is repeated. This effectively emulates a server push feature.
 ![Long Polling](https://user-images.githubusercontent.com/29687692/85210917-c0703480-b361-11ea-81f3-0c7acd59f45c.png)
 The flow:
@@ -191,16 +191,22 @@ The flow:
 4.  The browser makes a new request immediately.
 
 ------------------------
-### WebSockets
+
+## WebSockets
 Web sockets are defined as a two-way communication between the servers and the clients, which mean both the parties, communicate and exchange data at the same time. This protocol defines a full duplex communication from the ground up. Web sockets take a step forward in bringing desktop rich functionalities to the web browsers. It represents an evolution, which was awaited for a long time in client/server web technology.
 
 ![WebSocket](https://media.geeksforgeeks.org/wp-content/uploads/20191203183648/WebSocket-Connection.png)
+
 ### WebSocket Uses
+
 + **Real-time web application**
 + **Gaming application**
 + **Chat application**
+
 --------------------
-### Gateway
+
+## Gateway
+
 A **gateway** is a piece of [networking hardware](https://en.wikipedia.org/wiki/Networking_hardware "Networking hardware") used in [telecommunications](https://en.wikipedia.org/wiki/Telecommunication "Telecommunication") for telecommunications networks that allows data to flow from one discrete network to another. Gateways are distinct from [routers](https://en.wikipedia.org/wiki/Router_(computing) "Router (computing)") or [switches](https://en.wikipedia.org/wiki/Network_switch "Network switch") in that they communicate using more than one protocol to connect a bunch of networks and can operate at any of the seven layers of the [open systems interconnection](https://en.wikipedia.org/wiki/OSI_model "OSI model") model (OSI).
 
 A gateway is a network node that connects two networks using different protocols together. While a bridge is used to join two similar types of networks, a gateway is used to join two dissimilar networks.
@@ -216,9 +222,11 @@ Gateways can take several forms and perform a variety of tasks:
 -   **Amazon API Gateway** - allows a developer to connect non-AWS applications to AWS back-end resources
 -   **VoIP trunk gateway** - facilitates the use of plain old telephone service (POTS) equipment, such as landline phones and fax machines, with a voice over IP (VoIP) network
 -   **Email security gateway** - prevents the transmission of emails that break company policy or will transfer information with malicious intent
+
 -------------------------
 
-### Service Discovery
+## Service Discovery
+
 **Service discovery** is the automatic detection of devices and services offered by these devices on a [computer network](https://en.wikipedia.org/wiki/Computer_network "Computer network"). A **service discovery protocol** (**SDP**) is a [network protocol](https://en.wikipedia.org/wiki/Network_protocol "Network protocol") that helps accomplish service discovery. Service discovery aims to reduce the configuration efforts from users.
 
 Service discovery requires a common language to allow software agents to make use of one another's services without the need for continuous user intervention.
@@ -239,54 +247,62 @@ Service discovery involves 3 parties: service provider, service consumer and ser
 
 ---------------------
 
-### SQL vs NoSQL
+## SQL vs NoSQL
 
-#### When to pick a SQL database?
+ **When to pick a SQL database?**
 
 If you are writing a stock trading, banking, or a Finance-based app or you need to store a lot of relationships, for instance, when writing a social networking app like Facebook, then you should pick a relational database. SQL queries data in disk that's why SQL is more favourable then other DBs. Here’s why:
 
-**Transactions & Data Consistency**
++ **Transactions & Data Consistency**
 
-If you are writing software that has anything to do with money or numbers, that makes transactions, ACID, data consistency super important to you. Relational DBs shine when it comes to transactions & data consistency. They comply with the ACID rule, have been around for ages & are battle-tested.
+	If you are writing software that has anything to do with money or numbers, that makes transactions, ACID, data consistency super important to you. Relational DBs shine when it comes to transactions & data consistency. They comply with the ACID rule, have been around for ages & are battle-tested.
 
-**Storing Relationships**
++ **Storing Relationships**
 
-If your data has a lot of relationships like which friends of yours live in a particular city? Which of your friend already ate at the restaurant you plan to visit today? etc. There is nothing better than a relational database for storing this kind of data.
+	If your data has a lot of relationships like which friends of yours live in a particular city? Which of your friend already ate at the restaurant you plan to visit today? etc. There is nothing better than a relational database for storing this kind of data.
+
 
 Relational databases are built to store relationships. They have been tried & tested & are used by big guns in the industry like Facebook as the main user-facing database.
 
-Popular relational databases:
+**Popular relational databases:**
 
 -   [MySQL](https://www.educative.io/blog/mysql-tutorial)
 -   Microsoft SQL Server
 -   PostgreSQL
 -   MariaDB
 
-#### When to pick a NoSQL database
+ **When to pick a NoSQL database**
 
 Here are a few reasons why you want to pick a NoSQL database:
 
-**Handling A Large Number Of Read Write Operations**
++ **Handling A Large Number Of Read Write Operations**
 
-Look towards NoSQL databases when you need to scale fast. For example, when there are a large number of read-write operations on your website and when dealing with a large amount of data, NoSQL databases fit best in these scenarios. Since they have the ability to add nodes on the fly, they can handle more concurrent traffic and large amounts of data with minimal latency.
+	Look towards NoSQL databases when you need to scale fast. For example, when there are a large number of read-write operations on your website and when dealing with a large amount of data, NoSQL databases fit best in these scenarios. Since they have the ability to add nodes on the fly, they can handle more concurrent traffic and large amounts of data with minimal latency.
 
-**Running data analytics** NoSQL databases also fit best for data analytics use cases, where we have to deal with an influx of massive amounts of data.
++ **Running data analytics** 
+	
+	NoSQL databases also fit best for data analytics use cases, where we have to deal with an influx of massive amounts of data.
 
-Types Of NoSQL DBs:
+**Types Of NoSQL DBs:**
+
 + Key-Value Store (Cache Implementation, Hashmap Architecture)
 + Document Based DBs (Schema Undefined, R/W Heavy)
 + Column Based DBs (Events Store, Read Heavy)
 + Search Based DBs (Image/Video Store, Time Series Database)
 
-Popular NoSQL databases:
+**Popular NoSQL databases:**
 	
 -   MongoDB
 -   Redis
 -   Cassandra
 -   HBASE
 
-### Latency
+-------
+
+## Latency
+
 Data Travelling speed from one place to another Place
+
 | Data Size | Medium | Constraint |
 |--|--|--|
 | 1 MB | Memory |250 **µs**|
@@ -295,34 +311,50 @@ Data Travelling speed from one place to another Place
 |1MB|HDD|20000 **µs**|
 |packet|Country To Country|150000 **µs**|
 
-### Throughput
+------
+
+## Throughput
+
 Performance of System Component In Given amount of time
 
 [Must Read](https://stackoverflow.com/questions/36949735/what-is-the-difference-between-latency-bandwidth-and-throughput) for Latency vs Throughput vs Bandwidth
 
-### Cache
+----------
+
+## Cache
+
 Cache is used to access data at the earliest convenience to reduce network calls and recomputation.
+
 + Reducing Repetitive Network Calls
 + Avoiding Recomputation
 
 [Must Read](https://aws.amazon.com/caching/)
 
+--------
 
-### Load Balancing
+## Load Balancing
  
  in progress
 [Load Balancing With Practical Implementation](https://github.com/Crio-Bytes/System-Design/tree/main/Traffic%20Cop%20-%20Learn%20Load%20Balancer%20using%20HAProxy)
 
-### Consistent Hashing 
+--------
+
+## Consistent Hashing 
+
 in progress
 [Consistent Hashing](https://www.toptal.com/big-data/consistent-hashing)
 
-### Database Index
+--------
+## Database Index
 
 in progress
 [Must Read](https://stackoverflow.com/questions/1108/how-does-database-indexing-work)
 
-### Bloom Filters
+------------------
+
+## Bloom Filters
+
+in progress
 
 **Applications**
 - Avoid One Hit Wonders
@@ -334,7 +366,9 @@ in progress
 -   Hash based IP Traceback.
 -   Cyber security like virus scanning.
 
-### Sharding 
+-----------
+
+## Sharding 
 
 **Types Of Sharding**
 
@@ -358,12 +392,25 @@ in progress
 
 ![Consistent Hash Sharding vs Range Sharding](https://user-images.githubusercontent.com/29687692/99914751-85fe2f80-2d25-11eb-9696-dbbd5237d8be.png)
 
-### Leader Election
+-------
+
+## Leader Election
+in progress
 [Must Read](https://medium.com/@dty1er/lets-study-distributed-systems-4-leader-election-78a083981321)
+
+------------
 
 ### Split Brain Problem
 
+in progress
+
+-------------
+
 ### Distributed Consensus
+
+in progress
+
+**Important Terms**
 + PAXOS
 + RAFT
 + Zookeeper
@@ -371,9 +418,10 @@ in progress
 + 2PC
 + 3PC
 + MVCC (Multi Version Concurrency Control)
-+ 
 
-### API (Application Programming Interface)
+-------------
+
+## API (Application Programming Interface)
 
 **Advantages**
  - Communication 
@@ -397,8 +445,11 @@ in progress
    + Throttling
    + Session Login
    + 
+
+---------
   
-### REST 
+## REST 
+
 REST stands for Representational State Transfer it is a lifecycle or pattern on which client and server both agrees to exchange data between them
 
 **Rest Guidelines**
