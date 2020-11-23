@@ -13,34 +13,32 @@
 +  SQL vs. NoSQL.
 + Latency vs Throughput
 
-
+---------------
 ### Important System Design Algorithms To Read Before Interview
 
-+ Trie algorithm  
-+ Reverse index  
-+ Frugal Streaming  
-+ Geo-hashing  
-+ Leaky bucket, Token bucket and its variation  
-+ Bloom Filters  
-+ Operational transformation  
-+ Quadtree / Rtree  
-+ Loose Counting  
-+ XMPP / Web Sockets uses  
-+ HTTP Long polling  
-+ Consistent Hashing
-
-<br>
+ 1) Trie algorithm  
+2) Reverse index  
+3) Frugal Streaming  
+4) Geo-hashing  
+5) Leaky bucket, Token bucket and its variation  
+6) Bloom Filters  
+7) Operational transformation  
+8) Quadtree / Rtree  
+9) Loose Counting  
+10) XMPP / Web Sockets uses  
+11) HTTP Long polling  
+12) Consistent Hashing
 
 **Credit** - [Soumyajit Bhattacharyay](https://www.linkedin.com/in/soumyajit-bhattacharyay-4a897611a/)
 **[Post](https://www.linkedin.com/posts/soumyajit-bhattacharyay-4a897611a_scalability-systemdesign-hld-activity-6726135149836152832-luGH/)**
 
-<br>
-<br>
+---------
+
+### Bits And Bytes For Any System
+ACID Transaction, ACL, AES, Alerting, Apache Kafka, Asymmetric Encryption, Availability, Availability Zone, Blob Storage, Cache, Cache Eviction Policy, Cache Hit, Cache Miss, CAP Theorem, Certificate Authority, Client, Client-Server Model, Cloud Pub-Sub, Configuration, Consensus Algorithm, Consistent Hashing, Content Delivery network, Cypher, Database Index, Database Lock, Databases, DDoS Attack, Disk, Distributed File System, DNS, DOS Attack, Etcd, Eventual Consistency, File System, Forward Proxy, Google Cloud Storage, Gossip Protocol, Graph Database, Hadoop, Hashing Function, High Availability, Horizontal Scaling, Hot Spot, HTTP, HTTPS, Idempotent Operation, InfluxDB, IP, IP Address, IP Packet, JSON, Key-Value Store, Latency, Leader Election, Load Balancer, Logging, Man In The Middle Attack, Map Reduce, Memory, Microservice Architecture, MongoDB, Monitoring, Monolithic Architecture, MySQL, Neo4j, Nginx, Nines, Node/Instance/Host, Non-Relational Database, NoSQL Database, Pagination, Paxos & Raft, Zookeeper, YAML, Worker Pool Pattern, Virtual Machine, Vertical Scaling, TLS Handshake, TLS, Time Series Database, Throughput,TCP, Symmetric Encryption, Strong Consistency, Streaming, Stateless, Stateful, SSL Certificate, SQL Database, SQL, Spatial Database, Socket, SLO, SLA, Sharding, SHA, Server-Selection Strategy, Server, S3, Reverse Proxy, Replication, Rendezvous Hashing, Redundancy, Redis, Rate Limiting, Quadtree, Publish/Subscribe Pattern, Prometheus, Process, Postgres, Port, Polling, Persistent Storage, Percentiles, Peer-To-Peer Network
 
 ### System Design Terminologies
 Scalability, Availability, Efficiency, Reliability, Serviceability, Manageability, Extensible, Client-Server, Protocol, Proxy, Gateway, DNS, Latency, Throughput, Read Heavy, Write Heavy, 
-
-<br>
 
 ### Best System Design Interview Format Or Flow
 + Clarifying Questions
@@ -53,8 +51,54 @@ Scalability, Availability, Efficiency, Reliability, Serviceability, Manageabilit
 + Basic Architecture And Data Flow
 + Components or Functionality Implementation
 + Trade offs And Corner Cases
+ 
+ ### Some Capacity Estimation
+ |Component Or Platform| Unit Per Second | Unit Per Day | Highest At Single Time |
+ |--|--|--|--|
+ |Server|1000 Request| | |
+ |Google|3M Search Query| 5B||
+ |Twitter| 10K+ Tweets| ||
+ |Internet Traffic | 0.11M GB|||
+ |Youtube Upload||||
+ 
+ [See What's happening at every second in the world at these giant platforms](https://everysecond.io/)
+ 
+ ### Availability Industry Measurements Cheatsheet 
 
-<br> 
+| Availability level    | Downtime per year | Downtime per quarter | Downtime per month | Downtime per week | Downtime per day | Downtime per hour |
+|-----------------------|-------------------|----------------------|--------------------|-------------------|------------------|-------------------|
+| 90% ("one nine")      | 36.5 days         | 9 days               | 3 days             | 16.8 hours        | 2.4 hours        | 6 minutes         |
+| 95%                   | 18.25 days        | 4.5 days             | 1.5 days           | 8.4 hours         | 1.2 hours        | 3 minutes         |
+| 99% ("two-nines")     | 3.65 days         | 21.6 hours           | 7.2 hours          | 1.68 hours        | 14.4 minutes     | 36 seconds        |
+| 99.50%                | 1.83 days         | 10.8 hours           | 3.6 hours          | 50.4 minutes      | 7.20 minutes     | 18 seconds        |
+| 99.9%("three nines")  | 8.76 hours        | 2.16 hours           | 43.2 minutes       | 10.1 minutes      | 1.44 minutes     | 3.6 seconds       |
+| 99.95%                | 4.38 hours        | 1.08 hours           | 21.6 minutes       | 5.04 minutes      | 43.2 seconds     | 1.8 seconds       |
+| 99.99%("four nines")  | 52.6 minutes      | 12.96 minutes        | 4.32 minutes       | 60.5 seconds      | 8.64 seconds     | 0.36 seconds      |
+| 99.999%("five nines") | 5.26 minutes      | 1.30 minutes         | 25.9 seconds       | 6.05 seconds      | 0.87 seconds     | 0.04 seconds      |
+
+### Concept Technology Implementation 
+
+| System Design Concept |  Technology Used To Implement | Others |
+|--|--|--|
+| Cache | Redis, Daynamo DB, Memecached |  |
+| Message Queue | Rabbit MQ |  |
+|NoSQL DB| MongoDB | |
+|SQL DB| MYSQL DB| |
+|Proxy /Load Balancing | HAProxy, Nginx||
+|Cross Language Service Development| Thrift||
+|Centralized Service For Distributed Systems| Apache Zookeeper||
+| Distributed RESTful Search Engine| Elasticsearch||
+| Streaming | Kafka | |
+|Distributed File System| Hadoop||
+|CDN(Content Delivery Network)| Openconnect(Used By Netflix), AWS||
+|Key, Value Store| Amazon Daynamo DB, Redis, Zookeeper||
+|Column Based DB's| Cassandra, HBase, Sylla||
+|Image/Video Storage, Large Datasets, Time Series Database| Amazon S3, GCP Bucket||
+|Distributed Consensus/ Leader Election| Zookeeper, Etcd||
+
+
+ 
+ ------------------------
 
 ## Article Links
 + [ The complete guide to crack the System Design interview](https://towardsdatascience.com/the-complete-guide-to-the-system-design-interview-ba118f48bdfc)
@@ -64,15 +108,18 @@ Scalability, Availability, Efficiency, Reliability, Serviceability, Manageabilit
 + [ Top 10 System Design Interview Questions and Answers](https://www.geeksforgeeks.org/top-10-system-design-interview-questions-and-answers/)
 + [Getting Started With System Design](https://www.geeksforgeeks.org/getting-started-with-system-design/?ref=rp)
 + [How To Crack System Design Round in Interviews](https://www.geeksforgeeks.org/how-to-crack-system-design-round-in-interviews/?ref=rp)
-+ [What is web socket and how it is different from the HTTP?](https://www.geeksforgeeks.org/what-is-web-socket-and-how-it-is-different-from-the-http/)
-+ [Long polling](https://javascript.info/long-polling)
-+ [What is HTTP Long Polling?
-](https://www.pubnub.com/blog/http-long-polling/)
-+ [Service discovery in microservice architecture
-](https://hackernoon.com/understand-service-discovery-in-microservice-c323e78f47fd)
-+ [Service Discovery in a Microservices Architecture](https://dzone.com/articles/service-discovery-in-a-microservices-architecture)
++ [Internet And Protocols IP TCP HTTP](https://stackoverflow.com/questions/23157817/http-vs-tcp-ip-send-data-to-a-web-server)
++ [Introduction to architecting systems for scale](https://lethain.com/introduction-to-architecting-systems-for-scale/)
++ [Consistent Hashing](https://www.toptal.com/big-data/consistent-hashing)
++ [Uber System Design](https://www.geeksforgeeks.org/system-design-of-uber-app-uber-system-architecture/?fbclid=IwAR2j4sPfYICDIgAQSDnY_r978K0HJZ-xxx8j2cYy3S72FbVWl4EBLKEBnmk)
++ https://www.geeksforgeeks.org/what-is-web-socket-and-how-it-is-different-from-the-http/
++ https://www.tutorialspoint.com/websockets/index.htm
++ https://javascript.info/long-polling
++ https://www.pubnub.com/blog/http-long-polling/
++ https://hackernoon.com/understand-service-discovery-in-microservice-c323e78f47fd
++ https://dzone.com/articles/service-discovery-in-a-microservices-architecture
 
-<br>
+---------------------------------
 
 ## Best Engineering Blogs or Platform To Follow For System Design
 + [HighScalability](http://highscalability.com/)
@@ -80,19 +127,22 @@ Scalability, Availability, Efficiency, Reliability, Serviceability, Manageabilit
 + [A Distributed Systems Reading List](http://dancres.github.io/Pages/)
 + [Interviewbit System Design](https://www.interviewbit.com/courses/system-design/)
 +  [Linkedin Engineering](https://engineering.linkedin.com/)
-+ 
++  [Hike Blogs](https://blog.hike.in/)
 
-<br>
-
-## Best Documentations For System Design
+--------------------------------
+## Best Documentations For System Design Or Cheatsheets Or Handful Practicals
++ [Locate Cache in Your Browser](https://developers.google.com/web/tools/chrome-devtools/storage/cache) 
 + [System design primer in Github](https://github.com/donnemartin/system-design-primer)
 +  [AWS Documentation](https://docs.aws.amazon.com/)
 + [System Design Cheatsheet](https://gist.github.com/vasanthk/485d1c25737e8e72759f)
 + [ System Design Prepration](https://github.com/shashank88/system_design)
 + [Grokking System Design Interview Github](https://github.com/lei-hsia/grokking-system-design)
++ [High Availability and Nines Chart](https://en.wikipedia.org/wiki/High_availability)
++ [AWS vs Azure vs GCP](https://www.varonis.com/blog/aws-vs-azure-vs-google/)
++ [Basic Project Ideas For Distributed Systems](https://www.scs.stanford.edu/14au-cs244b/labs/project.html)
++ [Crio Byte System Design Repo](https://github.com/Crio-Bytes/System-Design)
 
-<br>
-
+---------------
 ## Best Youtube Channels And Playlists For System Design
 + [Gaurav Sen](https://www.youtube.com/channel/UCRPMAqdtSgd0Ipeef7iFsKw)
 + [Gaurav Sen System Design Playlist](https://www.youtube.com/playlist?list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX)
@@ -114,14 +164,13 @@ Scalability, Availability, Efficiency, Reliability, Serviceability, Manageabilit
 + [Distributed Systems Course](https://www.youtube.com/user/cbcolohan)
 + [Udit Agarwal](https://www.youtube.com/user/UDIT19911)
 
-
-<br>
+---------------
 
 **Note** Content is under continuous development phase. it contains some terminologies and concepts which really helps when you are thinking about systems.
 
-<br>
+-------------------
 
-## Content 
+### Content 
 
 + Long Polling
 + Websockets
@@ -141,8 +190,7 @@ The flow:
 3.  When a message appears – the server responds to the request with it.
 4.  The browser makes a new request immediately.
 
-<br>
-
+------------------------
 ### WebSockets
 Web sockets are defined as a two-way communication between the servers and the clients, which mean both the parties, communicate and exchange data at the same time. This protocol defines a full duplex communication from the ground up. Web sockets take a step forward in bringing desktop rich functionalities to the web browsers. It represents an evolution, which was awaited for a long time in client/server web technology.
 
@@ -151,9 +199,7 @@ Web sockets are defined as a two-way communication between the servers and the c
 + **Real-time web application**
 + **Gaming application**
 + **Chat application**
-
-<br>
-
+--------------------
 ### Gateway
 A **gateway** is a piece of [networking hardware](https://en.wikipedia.org/wiki/Networking_hardware "Networking hardware") used in [telecommunications](https://en.wikipedia.org/wiki/Telecommunication "Telecommunication") for telecommunications networks that allows data to flow from one discrete network to another. Gateways are distinct from [routers](https://en.wikipedia.org/wiki/Router_(computing) "Router (computing)") or [switches](https://en.wikipedia.org/wiki/Network_switch "Network switch") in that they communicate using more than one protocol to connect a bunch of networks and can operate at any of the seven layers of the [open systems interconnection](https://en.wikipedia.org/wiki/OSI_model "OSI model") model (OSI).
 
@@ -170,8 +216,7 @@ Gateways can take several forms and perform a variety of tasks:
 -   **Amazon API Gateway** - allows a developer to connect non-AWS applications to AWS back-end resources
 -   **VoIP trunk gateway** - facilitates the use of plain old telephone service (POTS) equipment, such as landline phones and fax machines, with a voice over IP (VoIP) network
 -   **Email security gateway** - prevents the transmission of emails that break company policy or will transfer information with malicious intent
-
-<br>
+-------------------------
 
 ### Service Discovery
 **Service discovery** is the automatic detection of devices and services offered by these devices on a [computer network](https://en.wikipedia.org/wiki/Computer_network "Computer network"). A **service discovery protocol** (**SDP**) is a [network protocol](https://en.wikipedia.org/wiki/Network_protocol "Network protocol") that helps accomplish service discovery. Service discovery aims to reduce the configuration efforts from users.
@@ -192,13 +237,13 @@ Service discovery involves 3 parties: service provider, service consumer and ser
 4.  **Sending back all data of a provider may not be necessary.** We can keep a **_global versioning_** of providers and consumer only needs to update its local copy when version got incremented.
 5.  **Single point of failure**. If the service registry (e.g. the redis instance we are using here) is down, all consumer and provider will be affected. To alleviate this, we can use a **_distributed database_** as service registry, such as `zookeeper/etcd/consul` .
 
-<br>
+---------------------
 
 ### SQL vs NoSQL
 
 #### When to pick a SQL database?
 
-If you are writing a stock trading, banking, or a Finance-based app or you need to store a lot of relationships, for instance, when writing a social networking app like Facebook, then you should pick a relational database. Here’s why:
+If you are writing a stock trading, banking, or a Finance-based app or you need to store a lot of relationships, for instance, when writing a social networking app like Facebook, then you should pick a relational database. SQL queries data in disk that's why SQL is more favourable then other DBs. Here’s why:
 
 **Transactions & Data Consistency**
 
@@ -227,12 +272,171 @@ Look towards NoSQL databases when you need to scale fast. For example, when ther
 
 **Running data analytics** NoSQL databases also fit best for data analytics use cases, where we have to deal with an influx of massive amounts of data.
 
-Popular NoSQL databases:
+Types Of NoSQL DBs:
++ Key-Value Store (Cache Implementation, Hashmap Architecture)
++ Document Based DBs (Schema Undefined, R/W Heavy)
++ Column Based DBs (Events Store, Read Heavy)
++ Search Based DBs (Image/Video Store, Time Series Database)
 
+Popular NoSQL databases:
+	
 -   MongoDB
 -   Redis
 -   Cassandra
 -   HBASE
 
+### Latency
+Data Travelling speed from one place to another Place
+| Data Size | Medium | Constraint |
+|--|--|--|
+| 1 MB | Memory |250 **µs**|
+|1MB| SSD|1000 **µs**|
+|1MB|1GBps Network|10000 **µs**|
+|1MB|HDD|20000 **µs**|
+|packet|Country To Country|150000 **µs**|
+
+### Throughput
+Performance of System Component In Given amount of time
+
+[Must Read](https://stackoverflow.com/questions/36949735/what-is-the-difference-between-latency-bandwidth-and-throughput) for Latency vs Throughput vs Bandwidth
+
+### Cache
+Cache is used to access data at the earliest convenience to reduce network calls and recomputation.
++ Reducing Repetitive Network Calls
++ Avoiding Recomputation
+
+[Must Read](https://aws.amazon.com/caching/)
+
+
+### Load Balancing
+ 
+ in progress
+[Load Balancing With Practical Implementation](https://github.com/Crio-Bytes/System-Design/tree/main/Traffic%20Cop%20-%20Learn%20Load%20Balancer%20using%20HAProxy)
+
+### Consistent Hashing 
+in progress
+[Consistent Hashing](https://www.toptal.com/big-data/consistent-hashing)
+
+### Database Index
+
+in progress
+[Must Read](https://stackoverflow.com/questions/1108/how-does-database-indexing-work)
+
+### Bloom Filters
+
+**Applications**
+- Avoid One Hit Wonders
+- Check Username Available or Not
+-   Weak password detection.
+-   Internet Cache Protocol.
+-   Safe browsing in Google Chrome.
+-   Wallet synchronization in Bitcoin.
+-   Hash based IP Traceback.
+-   Cyber security like virus scanning.
+
+### Sharding 
+
+**Types Of Sharding**
+
+- Vertical Sharding : Separating large dbs in columns into multiple smaller  subset dbs known as shards.
+ - Horizontal Sharding: Separating large dbs in with same schema but unique rows into multiple smaller dbs known as shards.
+
+![Sharding](https://user-images.githubusercontent.com/29687692/99910450-1a5f9680-2d14-11eb-909d-cbf6834d0daa.png)
+
+**Horizontal sharding**  is effective when queries tend to return a subset of rows that are often grouped together. For example, queries that filter data based on short date ranges are ideal for horizontal sharding since the date range will necessarily limit querying to only a subset of the servers.
+
+**Vertical sharding**  is effective when queries tend to return only a subset of columns of the data. For example, if some queries request only names, and others request only addresses, then the names and addresses can be sharded onto separate servers.
+
+[Sharding vs Partitioning ](https://stackoverflow.com/questions/20771435/database-sharding-vs-partitioning)
+
+[Very Good Read On Sharding Strategies](https://dzone.com/articles/four-data-sharding-strategies-for-distributed-sql)
+|Sharding Startergy  | Database | Pros| Cons|
+|--|--|--|--|
+|Consistent Hash Sharding| DaynamoDB Cassandra| Ideal For Scalabale Workloads, Adding Removing Nodes Easy| Performing Range Queries Are inefficient|
+|Simple Hashing Modulo based Sharding (Algorithmic Sharding| Memecahced, Redis| No Need Of DB Load Balancer| Inefficient For Adding Removing Shard Nodes|
+|Range Based Sharding| Google Spanner, HBase | Efficient For Range Queries| Database Warming, Hotspots|
+
+![Consistent Hash Sharding vs Range Sharding](https://user-images.githubusercontent.com/29687692/99914751-85fe2f80-2d25-11eb-9696-dbbd5237d8be.png)
+
+### Leader Election
+[Must Read](https://medium.com/@dty1er/lets-study-distributed-systems-4-leader-election-78a083981321)
+
+### Split Brain Problem
+
+### Distributed Consensus
++ PAXOS
++ RAFT
++ Zookeeper
++ Etcd
++ 2PC
++ 3PC
++ MVCC (Multi Version Concurrency Control)
++ 
+
+### API (Application Programming Interface)
+
+**Advantages**
+ - Communication 
+ - Abstraction
+ - Platform Agnostic
+ 
+ **Examples**
+  - Private APIs
+  - Public APIs
+  - Web APIs
+  - SDK/Library APIs
+  
+  **Standards**
+   - RPC
+   - SOAP
+   - REST
+   
+   **Some API Strategies For Different Purpose**
+   + API Security (OAuth2)
+   + Rate Limiting
+   + Throttling
+   + Session Login
+   + 
+  
+### REST 
+REST stands for Representational State Transfer it is a lifecycle or pattern on which client and server both agrees to exchange data between them
+
+**Rest Guidelines**
+ - Client-Server Architecture
+ - Cacheable
+ - Layered
+ - Stateless
+ - Uniform Interface
+ - Code on Demand
+
+
+**Format**
+
+`protocol/domain_name/resource_path`
+
+most used protocol: HTTP, HTTPS
+
+**Types Of HTTP Method**
+ - GET
+ - POST
+ - DELETE
+ - PUT/update
+ 
+ **Example Of Path Parameter and Query parameter**
+
+*Path Parameter* `https://domain.io/resource/path/:ID_or_KEY`
+
+*Query Parameter* `https://domain.io/resource/path/?range_or_condition_isEqual_to`
+ 
+ **HTTP Status Codes**
+  | Status Code Format | Summary |
+  |--|--|
+  |2XX| Request Response Successful |
+  |4XX| Request Failed Because Of Client Mistake |
+  |5XX| Request Failed Because Of Server Mistake |
+  |3XX| Redirection Of Resource|
+  |1XX| Informational|
+   
+-----------------
 
 **Note** Suggestions are Welcome
