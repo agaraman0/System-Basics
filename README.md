@@ -1,4 +1,4 @@
-# System Design
+# System Basics and Essentials 
 
 ## Must Learn System Design Concepts
 +  Consistent Hashing
