@@ -1,4 +1,4 @@
-# System Basics and Essentials 
+# System Design
 
 ## Must Learn System Design Concepts
 +  Consistent Hashing
@@ -35,7 +35,7 @@
 ---------
 
 ## Bits And Bytes For Any System
-ACID Transaction, ACL, AES, Alerting, Apache Kafka, Asymmetric Encryption, Availability, Availability Zone, Blob Storage, Cache, Cache Eviction Policy, Cache Hit, Cache Miss, CAP Theorem, Certificate Authority, Client, Client-Server Model, Cloud Pub-Sub, Configuration, Consensus Algorithm, Consistent Hashing, Content Delivery network, Cypher, Database Index, Database Lock, Databases, DDoS Attack, Disk, Distributed File System, DNS, DOS Attack, Etcd, Eventual Consistency, File System, Forward Proxy, Google Cloud Storage, Gossip Protocol, Graph Database, Hadoop, Hashing Function, High Availability, Horizontal Scaling, Hot Spot, HTTP, HTTPS, Idempotent Operation, InfluxDB, IP, IP Address, IP Packet, JSON, Key-Value Store, Latency, Leader Election, Load Balancer, Logging, Man In The Middle Attack, Map Reduce, Memory, Microservice Architecture, MongoDB, Monitoring, Monolithic Architecture, MySQL, Neo4j, Nginx, Nines, Node/Instance/Host, Non-Relational Database, NoSQL Database, Pagination, Paxos & Raft, Zookeeper, YAML, Worker Pool Pattern, Virtual Machine, Vertical Scaling, TLS Handshake, TLS, Time Series Database, Throughput,TCP, Symmetric Encryption, Strong Consistency, Streaming, Stateless, Stateful, SSL Certificate, SQL Database, SQL, Spatial Database, Socket, SLO, SLA, Sharding, SHA, Server-Selection Strategy, Server, S3, Reverse Proxy, Replication, Rendezvous Hashing, Redundancy, Redis, Rate Limiting, Quadtree, Publish/Subscribe Pattern, Prometheus, Process, Postgres, Port, Polling, Persistent Storage, Percentiles, Peer-To-Peer Network
+ACID Transaction, ACL, AES, Alerting, Apache Kafka, Asymmetric Encryption, Availability, Availability Zone, Blob Storage, Cache, Cache Eviction Policy, Cache Hit, Cache Miss, CAP Theorem, Certificate Authority, Client, Client-Server Model, Cloud Pub-Sub, Configuration, Consensus Algorithm, Consistent Hashing, Concurrency, Content Delivery network, Cypher, Database Index, Database Lock, Databases, DDoS Attack, Disk, Distributed File System, DNS, DOS Attack, Etcd, Eventual Consistency, File System, Forward Proxy, Google Cloud Storage, Gossip Protocol, Graph Database, Hadoop, Hashing Function, High Availability, Horizontal Scaling, Hot Spot, HTTP, HTTPS, Idempotent Operation, InfluxDB, IP, IP Address, IP Packet, JSON, Key-Value Store, Latency, Leader Election, Load Balancer, Logging, Man In The Middle Attack, Map Reduce, Memory, Microservice Architecture, MongoDB, Monitoring, Monolithic Architecture, MySQL, Neo4j, Nginx, Nines, Node/Instance/Host, Non-Relational Database, NoSQL Database, Pagination, Paxos & Raft, Zookeeper, YAML, Worker Pool Pattern, Virtual Machine, Vertical Scaling, TLS Handshake, TLS, Time Series Database, Throughput,TCP, Symmetric Encryption, Strong Consistency, Streaming, Stateless, Stateful, SSL Certificate, SQL Database, SQL, Spatial Database, Socket, SLO, SLA, Sharding, SHA, Server-Selection Strategy, Server, S3, Reverse Proxy, Replication, Rendezvous Hashing, Redundancy, Redis, Rate Limiting, Quadtree, Publish/Subscribe Pattern, Prometheus, Process, Postgres, Port, Polling, Persistent Storage, Percentiles, Peer-To-Peer Network
 
 ## System Design Terminologies
 Scalability, Availability, Efficiency, Reliability, Serviceability, Manageability, Extensible, Client-Server, Protocol, Proxy, Gateway, DNS, Latency, Throughput, Read Heavy, Write Heavy, 
@@ -81,7 +81,7 @@ Scalability, Availability, Efficiency, Reliability, Serviceability, Manageabilit
 | System Design Concept |  Technology Used To Implement | Others |
 |--|--|--|
 | Cache | Redis, Daynamo DB, Memecached |  |
-| Message Queue | Rabbit MQ |  |
+| Message Queue | RabbitMQ, Amazon SQS |  |
 |NoSQL DB| MongoDB | |
 |SQL DB| MYSQL DB| |
 |Proxy /Load Balancing | HAProxy, Nginx||
@@ -90,12 +90,50 @@ Scalability, Availability, Efficiency, Reliability, Serviceability, Manageabilit
 | Distributed RESTful Search Engine| Elasticsearch||
 | Streaming | Kafka | |
 |Distributed File System| Hadoop||
-|CDN(Content Delivery Network)| Openconnect(Used By Netflix), AWS||
+|CDN(Content Delivery Network)| Openconnect(Used By Netflix), AWS, Clodflare, Google Cloud CDN||
 |Key, Value Store| Amazon Daynamo DB, Redis, Zookeeper||
 |Column Based DB's| Cassandra, HBase, Sylla||
 |Image/Video Storage, Large Datasets, Time Series Database| Amazon S3, GCP Bucket||
 |Distributed Consensus/ Leader Election| Zookeeper, Etcd||
+|Real Time Communication(Audio, Video)| WebRTC||
 
+
+## Important Tools/Software/Methods/command for Software Development
+
+| Tool Name | Use Case |
+|--------------|-------|
+| Postman | API development lifecycle |
+| Dbeaver | SQL client for all types of relational DBs|
+| Snakeviz| viewer for Python profiling data|
+| OpenAPI | Standards to Define Restful web services|
+| Swagger, MkDocs | Software Documentation, API Documentation|
+| Coala | linting, Coding Standards, fixing code | 
+| netcat | all ports listing |
+| ps | list all running processes |
+| Git | version control system |
+| Github, Gitlab, Bitbucket | Remote collaboration dev |
+| tracert | Server Router Hops Path Routing |
+| Google Developer Tools Browser | API Analysis |
+| SSH | secure server protocol to communicate over unsecured server|
+| Pre-commit-hooks | |
+
+ 
+## Measure Performance of a System
++ Latency
++ Throughput
++ Availability
++ Consistency
++ Maintainability
++ Reliability
++ Bandwidth
+
+## Most used Software Architectures
+-   Layered Architecture
+-   Pipe and Filter
+-   Client Server
+-   Model View Controller
+-   Event Driven Architecture
+-   Microservices Architecture
 
  
  ------------------------
@@ -316,8 +354,16 @@ Data Travelling speed from one place to another Place
 ## Throughput
 
 Performance of System Component In Given amount of time
-
+**Example**:
+- Number of API calls served per unit Time
+-  
 [Must Read](https://stackoverflow.com/questions/36949735/what-is-the-difference-between-latency-bandwidth-and-throughput) for Latency vs Throughput vs Bandwidth
+
++ Throughput of system depends on Bandwidth
++ Throughput of system depends on Latency
+
+Throughput ∝ Bandwidth
+Throughput ∝ Latency
 
 ----------
 
@@ -487,7 +533,20 @@ most used protocol: HTTP, HTTPS
   |5XX| Request Failed Because Of Server Mistake |
   |3XX| Redirection Of Resource|
   |1XX| Informational|
-   
+
+-----------
+
+## Message Queues
+
+A message broker service which provides asynchronous communication between producer and consumer services.
+
+**Example**:
+ - Dominos Pizza Serivce Queue
+ - Ticket Window Queues
+
+
+![Message Queue](https://d1.awsstatic.com/product-marketing/Messaging/sqs_seo_queue.1dc710b63346bef869ee34b8a9a76abc014fbfc9.png)
+
 -----------------
 
 **Note** Suggestions are Welcome
