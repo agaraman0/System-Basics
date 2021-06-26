@@ -96,27 +96,31 @@ Scalability, Availability, Efficiency, Reliability, Serviceability, Manageabilit
 |Image/Video Storage, Large Datasets, Time Series Database| Amazon S3, GCP Bucket||
 |Distributed Consensus/ Leader Election| Zookeeper, Etcd||
 |Real Time Communication(Audio, Video)| WebRTC||
-
+| Kraken (Uber) | Peer To Peer Communication |[Kraken](https://github.com/uber/kraken), [Uber Blog](https://eng.uber.com/introducing-kraken/)|
 
 ## Important Tools/Software/Methods/command for Software Development
 
-| Tool Name | Use Case |
-|--------------|-------|
-| Postman | API development lifecycle |
-| Dbeaver | SQL client for all types of relational DBs|
-| Snakeviz| viewer for Python profiling data|
-| OpenAPI | Standards to Define Restful web services|
-| Swagger, MkDocs | Software Documentation, API Documentation|
-| Coala | linting, Coding Standards, fixing code | 
-| netcat | all ports listing |
-| ps | list all running processes |
-| Git | version control system |
-| Github, Gitlab, Bitbucket | Remote collaboration dev |
-| tracert | Server Router Hops Path Routing |
-| Google Developer Tools Browser | API Analysis |
-| SSH | secure server protocol to communicate over unsecured server|
-| Pre-commit-hooks | |
-
+| Tool Name | Use Case | Type |
+|--------------|-------|------|
+| Postman | API development lifecycle | Software|
+| Dbeaver | SQL client for all types of relational DBs| Software |
+| Snakeviz| viewer for Python profiling data| Web-Based package tool|
+| OpenAPI | Standards to Define Restful web services| Standard Documentation |
+| Swagger, MkDocs | Software Documentation, API Documentation| Tool |
+| Coala | linting, Coding Standards, fixing code | pacakge |
+| netcat | all ports listing | linux command |
+| ps | list all running processes | linux command |
+| Git | version control system | cli tool |
+| Github, Gitlab, Bitbucket | Remote collaboration dev | web based tool |
+| tracert | Server Router Hops Path Routing | linux command |
+| Developer Tools Browser | API Analysis | browser built in tools|
+| SSH | secure server protocol to communicate over unsecured server| cli tool |
+| Vim Editor | developer CLI editor | cli tool |
+| Pre-commit-hooks | linting, testing | git cli tool |
+| Junit, pytest, jest | unit testing (java, python, javascript | packages |
+| maven, gradle | project management tool | |
+| logging | ||
+| Port Forwarding| ngrok| |
  
 ## Measure Performance of a System
 + Latency
@@ -179,6 +183,7 @@ Scalability, Availability, Efficiency, Reliability, Serviceability, Manageabilit
 + [AWS vs Azure vs GCP](https://www.varonis.com/blog/aws-vs-azure-vs-google/)
 + [Basic Project Ideas For Distributed Systems](https://www.scs.stanford.edu/14au-cs244b/labs/project.html)
 + [Crio Byte System Design Repo](https://github.com/Crio-Bytes/System-Design)
++ [System Design Cheat sheet](https://vivek-singh.medium.com/system-design-cheat-sheet-318ba2e34723)
 
 ---------------
 ## Best Youtube Channels And Playlists For System Design
@@ -348,6 +353,45 @@ Data Travelling speed from one place to another Place
 |1MB|1GBps Network|10000 **µs**|
 |1MB|HDD|20000 **µs**|
 |packet|Country To Country|150000 **µs**|
+
+```
+Latency Comparison Numbers (~2012)
+
+----------------------------------
+
+L1 cache reference ......................... 0.5 ns
+Branch mispredict ............................ 5 ns
+L2 cache reference ........................... 7 ns
+Mutex lock/unlock ........................... 25 ns
+Main memory reference ...................... 100 ns             
+Compress 1K bytes with Zippy ............. 3,000 ns  =   3 µs
+Send 2K bytes over 1 Gbps network ....... 20,000 ns  =  20 µs
+SSD random read ........................ 150,000 ns  = 150 µs
+Read 1 MB sequentially from memory ..... 250,000 ns  = 250 µs
+Round trip within same datacenter ...... 500,000 ns  = 0.5 ms
+Read 1 MB sequentially from SSD* ..... 1,000,000 ns  =   1 ms
+Disk seek ........................... 10,000,000 ns  =  10 ms
+Read 1 MB sequentially from disk .... 20,000,000 ns  =  20 ms
+Send packet CA->Netherlands->CA .... 150,000,000 ns  = 150 ms
+
+Notes
+-----
+1 ns = 10^-9 seconds
+1 us = 10^-6 seconds = 1,000 ns
+1 ms = 10^-3 seconds = 1,000 us = 1,000,000 ns
+
+Credit
+------
+By Jeff Dean: http://research.google.com/people/jeff/
+Originally by Peter Norvig: http://norvig.com/21-days.html#answers
+
+Contributions
+-------------
+'Humanized' comparison: https://gist.github.com/hellerbarde/2843375
+Visual comparison chart: http://i.imgur.com/k0t1e.png
+```
+
+
 
 ------
 
@@ -550,3 +594,23 @@ A message broker service which provides asynchronous communication between produ
 -----------------
 
 **Note** Suggestions are Welcome
+
+## API Gateway vs Service Mesh
+A service mesh’s primary purpose is to manage internal service-to-service communication, while an API Gateway is primarily meant for external client-to-service communication.
+
+Popular apps: Zuul, [Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html).
+
+![Gateway vs Service Mesh](https://miro.medium.com/max/700/0*tALjg1HN71_UK4bg.png)
+
+## Authentication and Authorization
+![](https://media.geeksforgeeks.org/wp-content/uploads/20190606141632/Untitled-Diagram-2019-06-06T141540.818.png)
+
+| S. No. | Authentication | Authorization |
+|-----|-----|----|
+| 1 | In authentication process, the identity of users are checked for providing the access to the system.| While in authorization process, person’s or user’s authorities are checked for accessing the resources.|
+| 2 | In authentication process, users or persons are verified.| While in this process, users or persons are validated.|
+| 3 | It is done before the authorization process.| While this process is done after the authentication process.|
+| 4 | It needs usually user’s login details.| While it needs user’s privilege or security levels.|
+| 5 | Authentication determines whether the person is user or not. | While it determines **What permission do user have?** |
+
+**Credit** - [GFG Post](https://www.geeksforgeeks.org/difference-between-authentication-and-authorization/)
