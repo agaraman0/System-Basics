@@ -1,0 +1,32 @@
+# Notes on Learning
+
+## Fallacies of Distributed Systems 
+
+The fallacies
+
+The network is reliable;
+Latency is zero;
+Bandwidth is infinite;
+The network is secure;
+Topology doesn't change;
+There is one administrator;
+Transport cost is zero;
+The network is homogeneous;
+
+The effects of the fallacies
+Software applications are written with little error-handling on networking errors. During a network outage, such applications may stall or infinitely wait for an answer packet, permanently consuming memory or other resources. When the failed network becomes available, those applications may also fail to retry any stalled operations or require a (manual) restart.
+Ignorance of network latency, and of the packet loss it can cause, induces application- and transport-layer developers to allow unbounded traffic, greatly increasing dropped packets and wasting bandwidth.
+Ignorance of bandwidth limits on the part of traffic senders can result in bottlenecks.
+Complacency regarding network security results in being blindsided by malicious users and programs that continually adapt to security measures.
+Changes in network topology can have effects on both bandwidth and latency issues, and therefore can have similar problems.
+Multiple administrators, as with subnets for rival companies, may institute conflicting policies of which senders of network traffic must be aware in order to complete their desired paths.
+The "hidden" costs of building and maintaining a network or subnet are non-negligible and must consequently be noted in budgets to avoid vast shortfalls.
+If a system assumes a homogeneous network, then it can lead to the same problems that result from the first three fallacies.
+
+Source: https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing
+
+<img width="516" height="401" alt="Image" src="https://github.com/user-attachments/assets/033e7690-5af1-485e-a309-f7d748fa7f7c" />
+
+[![](https://mermaid.ink/img/pako:eNqFkkFvozAQhf-KNZX2RCIImDQ-rERBlVaqVpHavSzk4MAQrIKNbJOWjfLf11Canlbr09jvfW_Gsi9QqgqBwUnzviEvWSELmeS_pMZW8GOL5CfaN6VfD2S1-k4e8sSMsmy0kiP5Rh65aAeN5jBRD7MjzR-f9uRH1ytjxFG0wo6HTy3L02RPXhpUGruZST-YIE-VNCjNYMheK9d2khdxkz_zGu1IzoY8iTNKNFPDNFjkKSf7yA_yTBirxXGwWJFnqzQ_4eEmb-Y2zoGynOOSs7sAv02ZBYtvijR2dLdPSC3alt3VdemW58LVK7K7MAyXevUmKtuwTf_-iaQLUpYT9G8kWNMvKLtBSOv6vxB47sFEBazmrUEPOtQdn_ZwKSQhBdgGOyyAubLCmg-tLaCQV8f1XP5WqgNm9eBIrYZTc8sZ-opbzAR33-HLgrJCnapBWmBhTOcMYBd4BxaE23UcxYEbNKBRsAljD0ZgdL2LfH8XbSN36O_i8OrBn7mr7xTnirfb-3vqU0qj619bRdDK?type=png)](https://mermaid.live/edit#pako:eNqFkkFvozAQhf-KNZX2RCIImDQ-rERBlVaqVpHavSzk4MAQrIKNbJOWjfLf11Canlbr09jvfW_Gsi9QqgqBwUnzviEvWSELmeS_pMZW8GOL5CfaN6VfD2S1-k4e8sSMsmy0kiP5Rh65aAeN5jBRD7MjzR-f9uRH1ytjxFG0wo6HTy3L02RPXhpUGruZST-YIE-VNCjNYMheK9d2khdxkz_zGu1IzoY8iTNKNFPDNFjkKSf7yA_yTBirxXGwWJFnqzQ_4eEmb-Y2zoGynOOSs7sAv02ZBYtvijR2dLdPSC3alt3VdemW58LVK7K7MAyXevUmKtuwTf_-iaQLUpYT9G8kWNMvKLtBSOv6vxB47sFEBazmrUEPOtQdn_ZwKSQhBdgGOyyAubLCmg-tLaCQV8f1XP5WqgNm9eBIrYZTc8sZ-opbzAR33-HLgrJCnapBWmBhTOcMYBd4BxaE23UcxYEbNKBRsAljD0ZgdL2LfH8XbSN36O_i8OrBn7mr7xTnirfb-3vqU0qj619bRdDK)
+
+[![](https://mermaid.ink/img/pako:eNqNk81u2zAMx1-F0ICdnC7-SlIfCqSOsxXIimDrLrNzUG0qFmpLgSS3TYte9wB7xD3JZDtxMwzD6pNM8kf-SVHPJJcFkohsFd2VcLPIRCbm6TehsOL0tkK4RvMg1R28hyXlVaNQb2A0uoDL9KreSa35La-42cMX1E1l9KZNcNlFxOlytYY_ojZH3yKN52u4KVEqrAdrkq7ncbKK_3Is08v9ExWGC4SPKFDRSsNaSSuw7irGfUU3jaXQKHRz6j44vfQrZWil3mtY8XubRrdyY_fgbvMsenV9Hq4NinzvwPzetk77FhxYU2W44VLAjaysFJHjZiC9NC6l1AgeyMaAZOBD0Sgutq9cpzjpO3aPLSePtpjuvUkvKfHSK3ZS7tePn9COzSha4EgydhLqp0llq7YhK9rJbts86aIruuyn6abzrUKsURh44KaEz7TiOZd2atd2HdqpHCJtOxW115fT6jjQyK4EFnDhffDhk7RDNAOUCW32dmfmwHhVRe8Yy-3naKPkHUbvfN8_nEcPvDBl5O0ej0h8QPK8hf6NuGfhK7QYIAwZeyOUDOKYnxdvhJYHCMNW4H8h4tgHxQsSMbuo6JAaVU3bf_KcCYCMmNJOPyORPRbIqH05GcnEi-V2VHyXsiaRUY0llWy25ZCn2RX2chec2udaD1aFokAVy0YYEgWTcZeERM_kkUShezaxpunMm54HXhjMHLK3QeHZeTAen7tBMHEnYeiFLw556sqOrcfzJ5PpdDYLx2EYBi-_AfNHXsU?type=png)](https://mermaid.live/edit#pako:eNqNk81u2zAMx1-F0ICdnC7-SlIfCqSOsxXIimDrLrNzUG0qFmpLgSS3TYte9wB7xD3JZDtxMwzD6pNM8kf-SVHPJJcFkohsFd2VcLPIRCbm6TehsOL0tkK4RvMg1R28hyXlVaNQb2A0uoDL9KreSa35La-42cMX1E1l9KZNcNlFxOlytYY_ojZH3yKN52u4KVEqrAdrkq7ncbKK_3Is08v9ExWGC4SPKFDRSsNaSSuw7irGfUU3jaXQKHRz6j44vfQrZWil3mtY8XubRrdyY_fgbvMsenV9Hq4NinzvwPzetk77FhxYU2W44VLAjaysFJHjZiC9NC6l1AgeyMaAZOBD0Sgutq9cpzjpO3aPLSePtpjuvUkvKfHSK3ZS7tePn9COzSha4EgydhLqp0llq7YhK9rJbts86aIruuyn6abzrUKsURh44KaEz7TiOZd2atd2HdqpHCJtOxW115fT6jjQyK4EFnDhffDhk7RDNAOUCW32dmfmwHhVRe8Yy-3naKPkHUbvfN8_nEcPvDBl5O0ej0h8QPK8hf6NuGfhK7QYIAwZeyOUDOKYnxdvhJYHCMNW4H8h4tgHxQsSMbuo6JAaVU3bf_KcCYCMmNJOPyORPRbIqH05GcnEi-V2VHyXsiaRUY0llWy25ZCn2RX2chec2udaD1aFokAVy0YYEgWTcZeERM_kkUShezaxpunMm54HXhjMHLK3QeHZeTAen7tBMHEnYeiFLw556sqOrcfzJ5PpdDYLx2EYBi-_AfNHXsU)
